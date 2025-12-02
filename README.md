@@ -2,7 +2,7 @@
 
 > 一本系统、深入、实用的 Claude Code 智能编程工具教程
 > 
-> 基于 Claude 4.5 系列模型
+> 内容以 Claude 3.5 / 4.5 及之后的最新模型能力为参考编写
 
 ## 关于本书
 
@@ -18,15 +18,15 @@ Claude Code 是 Anthropic 公司推出的 **Agentic Coding Tool**（智能编程
 - 通过 MCP 协议连接外部数据源和服务
 - 与 GitHub Actions 深度集成
 
-### 2025年重要更新
+### 2025年重要更新（示例时间线）
 
 | 时间 | 更新内容 |
 |------|---------|
 | 2025年5月 | Claude 4 系列发布（Opus 4、Sonnet 4） |
 | 2025年7月 | 远程 MCP 服务器支持 |
-| 2025年9月 | Claude Sonnet 4.5 + Claude Agent SDK |
-| 2025年10月 | Claude Haiku 4.5 |
-| 2025年11月 | Claude Opus 4.5（全球最佳编码模型） |
+| 2025年9月 | Claude Sonnet 4.5 与 Claude Agent SDK 推出 |
+| 2025年10月 | Claude Haiku 4.5 发布 |
+| 2025年11月 | Claude Opus 4.5 上线，面向复杂编码场景的旗舰模型 |
 
 ## 本书特色
 
@@ -100,16 +100,23 @@ Claude Code 是 Anthropic 公司推出的 **Agentic Coding Tool**（智能编程
 ## 快速开始
 
 ```bash
-# 确保已安装 Node.js 18+
-node --version
+# 推荐：使用官方安装脚本
+curl -fsSL https://claude.ai/install.sh | bash
 
-# 全局安装 Claude Code
-npm install -g @anthropic-ai/claude-code
-
-# 验证安装
-claude --version
+# 进入你的项目目录
+cd your-project
 
 # 启动 Claude Code
+claude
+```
+
+如果你所在的环境更适合通过 npm 安装，也可以使用：
+
+```bash
+# 可选：通过 npm 全局安装
+npm install -g @anthropic-ai/claude-code
+
+claude --version
 claude
 ```
 
@@ -129,19 +136,19 @@ claude
 
 ## 版本说明
 
-- **本书版本**：基于 Claude 4.5 系列
-- **Claude Code 版本**：基于最新稳定版
-- **Claude 模型**：涵盖 Claude 3.5 至 Claude 4.5 系列
-- **MCP 协议**：包含 2025年7月远程服务器支持
+- **本书版本**：以 Claude 3.5 / 4.5 及之后的最新模型系列为参考
+- **Claude Code 版本**：以官方最新稳定版本为基准编写，具体以文档为准
+- **Claude 模型**：示例主要基于 Claude 3.5、Sonnet 4.x、Opus 4.x 等模型能力
+- **MCP 协议**：示例包含 2025 年前后引入的远程服务器与工具集成功能
 
-部分功能可能随版本更新而变化，建议读者结合[官方文档](https://docs.anthropic.com/en/docs/claude-code)获取最新信息。
+部分功能可能随版本更新而变化，建议读者结合[官方文档](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)获取最新信息。
 
 ## 相关资源
 
 | 资源 | 链接 |
 |------|------|
 | Anthropic 官网 | https://www.anthropic.com |
-| Claude Code 文档 | https://docs.anthropic.com/en/docs/claude-code |
+| Claude Code 文档 | https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview |
 | MCP 协议规范 | https://spec.modelcontextprotocol.io |
 | npm 包 | https://www.npmjs.com/package/@anthropic-ai/claude-code |
 

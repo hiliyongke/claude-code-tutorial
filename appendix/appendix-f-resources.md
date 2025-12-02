@@ -5,15 +5,15 @@
 ## F.1 官方资源
 
 ### 文档与指南
-- **Claude Code 官方文档**：https://docs.anthropic.com/claude-cli
+- **Claude Code 官方文档**：https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview
 - **Anthropic API 文档**：https://docs.anthropic.com/api
 - **MCP 协议规范**：https://docs.anthropic.com/mcp
 - **Claude 模型文档**：https://docs.anthropic.com/claude
 
 ### 代码仓库
-- **Claude Code GitHub**：https://github.com/anthropics/claude-cli
+- **Claude Code 相关 GitHub 仓库**：https://github.com/anthropics/claude-code-action
 - **MCP Servers 示例**：https://github.com/anthropics/mcp-servers
-- **官方示例项目**：https://github.com/anthropics/claude-cli-examples
+- **官方示例项目/集成**：https://github.com/anthropics/anthropic-cookbook
 
 ### 官方博客与公告
 - **Anthropic 博客**：https://www.anthropic.com/blog
@@ -132,13 +132,13 @@
 ### 定期检查
 ```bash
 # 检查 Claude Code 更新
-npm outdated -g @anthropic-ai/claude-cli
+npm outdated -g @anthropic-ai/claude-code
 
 # 查看更新日志
 claude changelog
 
 # 关注 GitHub Releases
-# https://github.com/anthropics/claude-cli/releases
+# https://github.com/anthropics/claude-code-action/releases
 ```
 
 ---

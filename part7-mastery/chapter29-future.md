@@ -44,7 +44,7 @@ Claude Opus 4.5 的发布标志着 AI 编程进入了新阶段——AI 可以连
 |------|------|------|
 | Claude 4 系列发布 | 2025.05 | 7小时连续工作能力 |
 | Claude Agent SDK | 2025.09 | 开发者可构建自定义 Agent |
-| Claude Opus 4.5 | 2025.11 | 全球最佳编码模型 |
+| Claude Opus 4.5 | 2025.11 | 面向复杂编码和智能体场景的旗舰模型 |
 | F 轮融资 130 亿美元 | 2025.11 | 估值 1830 亿美元 |
 | 500 亿美元 AI 基础设施投资 | 2025.11 | 美国 AI 基础设施建设 |
 | Microsoft 战略合作 | 2025.11 | Claude 入驻 Microsoft 365 |
@@ -159,7 +159,7 @@ MCP 协议作为 AI 与外部系统交互的标准，预计将持续发展：
 |------|------|------|
 | Anthropic 官网 | https://www.anthropic.com | 公司动态、研究论文 |
 | Claude 文档 | https://docs.anthropic.com | 官方技术文档 |
-| Claude Code 文档 | https://docs.anthropic.com/en/docs/claude-code | Claude Code 专项文档 |
+| Claude Code 文档 | https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview | Claude Code 专项文档 |
 | MCP 规范 | https://spec.modelcontextprotocol.io | MCP 协议规范 |
 | Anthropic 博客 | https://www.anthropic.com/news | 产品更新、技术文章 |
 | GitHub | https://github.com/anthropics | 开源项目、SDK |

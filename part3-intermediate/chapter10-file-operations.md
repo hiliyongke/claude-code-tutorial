@@ -16,8 +16,9 @@ Claude Code 提供了一套完整的文件操作工具，使 Claude 能够直接
 | NotebookEdit | 修改 Jupyter Notebook 单元格 | 编辑 .ipynb 文件 | 是 |
 | Task | 运行子代理处理复杂任务 | 多步骤文件操作 | 否 |
 | TodoWrite | 创建并管理任务列表 | 跟踪文件修改进度 | 否 |
+| List | 列出目录和文件结构（目录浏览能力） | 浏览项目结构、统计文件 | 否 |
 
-> **完整工具列表**：Claude Code 共有 17 个内置工具，详见第 7 章权限配置部分。
+> **说明**：下表展示的是 Claude Code 中常用的文件相关能力示例，实际可用工具及其内部名称以当前版本 Claude Code 的内置帮助和官方文档为准。
 
 ### 10.1.2 工具调用流程
 
@@ -477,7 +478,7 @@ src/utils/__tests__/
 ```
 > 显示 src/ 目录结构
 
-[List: src/]
+Claude 列出了 `src/` 目录结构：
 
 src/
 ├── controllers/
@@ -515,7 +516,7 @@ src/
 ```
 > 详细列出 src/services/ 目录，包含文件大小和修改时间
 
-[List: src/services/ --detailed]
+Claude 以“详细模式”列出了 `src/services/` 目录：
 
 src/services/
 │

@@ -151,7 +151,7 @@ fi
 
 ### 19.2.1 VS Code 集成方案
 
-Visual Studio Code 是目前最流行的代码编辑器之一。虽然 Claude Code 是命令行工具，但可以通过多种方式与 VS Code 配合使用。
+Visual Studio Code 是目前最流行的代码编辑器之一。除了通过命令行使用 Claude Code 以外，Anthropic 也提供了 Claude Code 的 VS Code 扩展（Beta），可以在侧边栏中直接使用同样的能力；本章示例主要演示如何在 VS Code 中通过终端和任务系统调用 CLI，与扩展方式互为补充。
 
 **方案一：集成终端**
 
@@ -416,7 +416,7 @@ services:
 FROM node:18
 
 # 安装 Claude Code
-RUN npm install -g @anthropic-ai/claude-cli
+RUN npm install -g @anthropic-ai/claude-code
 
 # 配置工作目录
 WORKDIR /app
@@ -448,7 +448,7 @@ docker history my-image | claude -p "请分析这个镜像的构建历史，识�
 
 ```bash
 # 在远程服务器上安装 Claude Code
-ssh user@remote-server "npm install -g @anthropic-ai/claude-cli"
+ssh user@remote-server "npm install -g @anthropic-ai/claude-code"
 
 # 配置 API 密钥（安全方式）
 ssh user@remote-server "claude config set apiKey \$ANTHROPIC_API_KEY"
@@ -470,7 +470,7 @@ ssh user@remote-server "nohup claude -p '分析项目代码' > analysis.log 2>&1
 
 ```bash
 # 在 WSL 中安装 Claude Code
-wsl npm install -g @anthropic-ai/claude-cli
+wsl npm install -g @anthropic-ai/claude-code
 
 # 配置环境变量
 wsl export ANTHROPIC_API_KEY="your-api-key"
@@ -520,7 +520,7 @@ function Invoke-ClaudeReview {
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {}
     },
-    "postCreateCommand": "npm install -g @anthropic-ai/claude-cli",
+    "postCreateCommand": "npm install -g @anthropic-ai/claude-code",
     "remoteEnv": {
         "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
     },

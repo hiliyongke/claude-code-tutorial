@@ -589,7 +589,7 @@ jobs:
           node-version: '20'
       
       - name: Install Claude Code
-        run: npm install -g @anthropic-ai/claude-cli
+        run: npm install -g @anthropic-ai/claude-code
       
       - name: Configure Claude
         run: |
@@ -641,7 +641,7 @@ ai-code-review:
   image: node:20
   
   before_script:
-    - npm install -g @anthropic-ai/claude-cli
+    - npm install -g @anthropic-ai/claude-code
     - mkdir -p ~/.config/claude
     - echo "{\"apiKey\": \"$ANTHROPIC_API_KEY\"}" > ~/.config/claude/config.json
   
@@ -680,7 +680,7 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                sh 'npm install -g @anthropic-ai/claude-cli'
+                sh 'npm install -g @anthropic-ai/claude-code'
                 sh '''
                     mkdir -p ~/.config/claude
                     echo "{\\"apiKey\\": \\"${ANTHROPIC_API_KEY}\\"}" > ~/.config/claude/config.json

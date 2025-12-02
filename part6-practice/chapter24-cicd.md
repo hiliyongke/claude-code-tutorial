@@ -475,7 +475,7 @@ jobs:
           fetch-depth: 0
       
       - name: Setup Claude Code
-        run: npm install -g @anthropic-ai/claude-cli
+        run: npm install -g @anthropic-ai/claude-code
       
       - name: Get changed files
         id: changed
@@ -525,7 +525,7 @@ jobs:
           fetch-depth: 0
       
       - name: Setup Claude Code
-        run: npm install -g @anthropic-ai/claude-cli
+        run: npm install -g @anthropic-ai/claude-code
       
       - name: Generate changelog
         env:

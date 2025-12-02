@@ -6,7 +6,7 @@
 
 ### 问题：安装失败
 
-**症状**：`npm install -g @anthropic-ai/claude-cli` 失败
+**症状**：`npm install -g @anthropic-ai/claude-code` 失败
 
 **解决方案**：
 ```bash
@@ -17,10 +17,10 @@ node --version
 npm cache clean --force
 
 # 3. 使用管理员权限安装
-sudo npm install -g @anthropic-ai/claude-cli
+sudo npm install -g @anthropic-ai/claude-code
 
 # 4. 或使用 npx 直接运行
-npx @anthropic-ai/claude-cli
+npx @anthropic-ai/claude-code
 ```
 
 ### 问题：API Key 无效
@@ -54,8 +54,8 @@ npm root -g
 export PATH="$PATH:$(npm root -g)/../bin"
 
 # 3. 或重新安装
-npm uninstall -g @anthropic-ai/claude-cli
-npm install -g @anthropic-ai/claude-cli
+npm uninstall -g @anthropic-ai/claude-code
+npm install -g @anthropic-ai/claude-code
 ```
 
 ## D.2 运行时问题
@@ -219,7 +219,7 @@ claude --model claude-3-haiku
 如果以上方案无法解决问题：
 
 1. **查看详细日志**：`claude --debug`
-2. **检查官方文档**：https://docs.anthropic.com/claude-cli
-3. **搜索 GitHub Issues**：https://github.com/anthropics/claude-cli/issues
+2. **检查官方文档**：https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview
+3. **搜索 GitHub Issues**：https://github.com/anthropics/claude-code-action/issues
 4. **社区求助**：Discord、Stack Overflow
 5. **提交 Bug 报告**：包含复现步骤、错误信息、环境信息

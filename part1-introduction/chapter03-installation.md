@@ -294,7 +294,7 @@ Claude Code 的配置文件存储在以下位置：
 ```json
 {
   "theme": "dark",
-  "preferredModel": "claude-sonnet-4-5-20250929",
+  "preferredModel": "your-preferred-model-id",
   "autoCompactThreshold": 500,
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.anthropic.com",
