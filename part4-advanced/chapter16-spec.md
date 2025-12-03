@@ -15,33 +15,31 @@ Spec 是一种结构化的需求描述方式：
 
 ### 16.1.2 Spec 的价值
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    传统开发流程                          │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  需求文档 → 人工理解 → 逐步实现 → 手动验证              │
-│                                                         │
-│  问题：                                                 │
-│  - 需求理解偏差                                         │
-│  - 实现遗漏                                             │
-│  - 进度难以跟踪                                         │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────┐
-│                    Spec 驱动开发                         │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  Spec 文档 → 自动解析 → 任务分解 → 逐步实现 → 自动验证  │
-│                                                         │
-│  优势：                                                 │
-│  - 需求理解一致                                         │
-│  - 任务自动分解                                         │
-│  - 进度自动跟踪                                         │
-│  - 实现与规范对齐                                       │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph traditional["传统开发流程"]
+        T1["需求文档"] --> T2["人工理解"] --> T3["逐步实现"] --> T4["手动验证"]
+    end
+    
+    subgraph problems["❌ 问题"]
+        P1["需求理解偏差"]
+        P2["实现遗漏"]
+        P3["进度难以跟踪"]
+    end
+    
+    subgraph spec["Spec 驱动开发"]
+        S1["Spec 文档"] --> S2["自动解析"] --> S3["任务分解"] --> S4["逐步实现"] --> S5["自动验证"]
+    end
+    
+    subgraph advantages["✅ 优势"]
+        A1["需求理解一致"]
+        A2["任务自动分解"]
+        A3["进度自动跟踪"]
+        A4["实现与规范对齐"]
+    end
+    
+    traditional --> problems
+    spec --> advantages
 ```
 
 ### 16.1.3 适用场景
@@ -122,34 +120,32 @@ Spec 是一种结构化的需求描述方式：
 
 ### Architecture
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    API Layer                             │
-│  ┌─────────────────────────────────────────────────┐   │
-│  │              AuthController                      │   │
-│  │  POST /auth/register                            │   │
-│  │  POST /auth/login                               │   │
-│  │  POST /auth/logout                              │   │
-│  │  POST /auth/forgot-password                     │   │
-│  │  POST /auth/reset-password                      │   │
-│  └─────────────────────────────────────────────────┘   │
-├─────────────────────────────────────────────────────────┤
-│                   Service Layer                          │
-│  ┌─────────────────────────────────────────────────┐   │
-│  │              AuthService                         │   │
-│  │  - register()                                   │   │
-│  │  - login()                                      │   │
-│  │  - logout()                                     │   │
-│  │  - forgotPassword()                             │   │
-│  │  - resetPassword()                              │   │
-│  └─────────────────────────────────────────────────┘   │
-├─────────────────────────────────────────────────────────┤
-│                   Data Layer                             │
-│  ┌─────────────────────────────────────────────────┐   │
-│  │              UserRepository                      │   │
-│  │              TokenRepository                     │   │
-│  └─────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph api["API Layer"]
+        AC["AuthController"]
+        AC1["POST /auth/register"]
+        AC2["POST /auth/login"]
+        AC3["POST /auth/logout"]
+        AC4["POST /auth/forgot-password"]
+        AC5["POST /auth/reset-password"]
+    end
+    
+    subgraph service["Service Layer"]
+        AS["AuthService"]
+        AS1["register()"]
+        AS2["login()"]
+        AS3["logout()"]
+        AS4["forgotPassword()"]
+        AS5["resetPassword()"]
+    end
+    
+    subgraph data["Data Layer"]
+        UR["UserRepository"]
+        TR["TokenRepository"]
+    end
+    
+    api --> service --> data
 ```
 
 ### Data Models

@@ -22,6 +22,7 @@ Claude Code 是 Anthropic 公司推出的 **Agentic Coding Tool**（智能编程
 
 | 时间 | 更新内容 |
 |------|---------|
+| 2025年2月 | Claude 3.7 Sonnet 发布（首款混合推理模型），Claude Code 首发 |
 | 2025年5月 | Claude 4 系列发布（Opus 4、Sonnet 4） |
 | 2025年7月 | 远程 MCP 服务器支持 |
 | 2025年9月 | Claude Sonnet 4.5 与 Claude Agent SDK 推出 |
@@ -82,6 +83,9 @@ Claude Code 是 Anthropic 公司推出的 **Agentic Coding Tool**（智能编程
 ### 第七部分：精通篇（企业与未来）
 
 - [第25章：企业级部署方案](part7-mastery/chapter25-enterprise.md)
+- [第25.5章：企业级 Hooks+Skills+Spec+MCP 集成最佳实践](part7-mastery/chapter25-5-enterprise-integration.md)
+- [第25.6章：团队培训与推广指南](part7-mastery/chapter25-6-team-training.md)
+- [第25.7章：合规审计详细指南](part7-mastery/chapter25-7-compliance-audit.md)
 - [第26章：成本控制与优化](part7-mastery/chapter26-cost.md)
 - [第27章：性能调优指南](part7-mastery/chapter27-performance.md)
 - [第28章：安全最佳实践](part7-mastery/chapter28-security.md)
